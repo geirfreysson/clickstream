@@ -13,7 +13,7 @@ The functions that have to be available are:
 h2. Installation
 
 Install the plugin with
-bc. script/plugin install git://github.com/geirfreysson/clickstream.git
+<code>script/plugin install git://github.com/geirfreysson/clickstream.git</code>
 
 To create the tables used by Clickstream run the database migration task:
 bc. rake db:migrate:clickstream
