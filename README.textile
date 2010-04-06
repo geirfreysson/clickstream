@@ -1,0 +1,33 @@
+h1. Clickstream
+
+Clickstream is a plugin that allows Rails applications to track clicks and clickstreams and associate them with users. Using Clickstream
+you can monitor which clients/users log in most frequently, what your apps most common clickstreams look like etc. 
+
+The plugin is written as a supplement to the Restful Authentication plugin but as long as certain functions are globally available it
+supports any authentication scheme.
+
+The functions that have to be available are:
+* current_user
+* logged_in?
+
+h2. Installation
+
+Install the plugin with
+bc. script/plugin install git://github.com/geirfreysson/clickstream.git
+
+To create the tables used by Clickstream run the database migration task:
+bc. rake db:migrate:clickstream
+
+Next, include the module in the controller you want to monitor (or in the application controller to monitor all clicks) and add
+a before_filter.
+
+bc. include Clickstream
+before_filter :follow_clickstream
+
+Now all clicks are saved in the database and can be accessed and analyzed via the Stream objects.
+
+Currently, we're only pulling up the most recent clickstreams and using that to analyze how our clients are using our products. We intend to
+add more sophisticated queries once we have more data which will analyze common clickstream patterns etc. 
+
+
+Copyright (c) 2010 [name of plugin creator], released under the MIT license

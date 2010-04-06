@@ -1,0 +1,21 @@
+sqlite:
+  adapter: sqlite
+  database: vendor/plugins/clickstream/test/clickstream_plugin.sqlite.db
+
+sqlite3:
+  adapter: sqlite3
+  database: vendor/plugins/clickstream/test/clickstream_plugin.sqlite3.db
+
+postgresql:
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  database: clickstream_plugin_test
+  min_messages: ERROR
+
+mysql:
+  adapter: mysql
+  host: localhost
+  username: root
+  password: password
+  database: clickstream_plugin_test

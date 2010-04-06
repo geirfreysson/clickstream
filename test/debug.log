@@ -1,0 +1,425 @@
+# Logfile created on Fri Apr 02 16:41:39 +0000 2010 by /
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE "clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (3.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mDROP TABLE "clicks"[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mDROP TABLE "streams"[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mCREATE TABLE "streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mDROP TABLE "clicks"[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE TABLE "clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mDROP TABLE "streams"[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mDROP TABLE "clicks"[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE TABLE "clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mDROP TABLE "streams"[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mDROP TABLE "clicks"[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCREATE TABLE "clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mDROP TABLE "streams"[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (27.5ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (26.8ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (8.7ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mStream Create (0.4ms)[0m   [0mINSERT INTO "cs_plugin_streams" ("session_id", "user_id", "last_click", "created_at") VALUES(NULL, NULL, NULL, '2010-04-03 16:33:37')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (12.8ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (103.0ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mStream Create (0.4ms)[0m   [0mINSERT INTO "cs_plugin_streams" ("session_id", "user_id", "last_click", "created_at") VALUES(NULL, NULL, NULL, '2010-04-03 16:35:22')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mStream Create (0.4ms)[0m   [0mINSERT INTO "cs_plugin_streams" ("session_id", "user_id", "last_click", "created_at") VALUES(NULL, NULL, NULL, '2010-04-03 16:44:04')[0m
+  [4;36;1mClick Create (0.5ms)[0m   [0;1mINSERT INTO "cs_plugin_clicks" ("path_info", "http_user_agent", "action", "http_referer", "remote_address", "controller", "params", "request_uri", "stream_id", "created_at", "request_path") VALUES('/', 'Rails Testing', NULL, NULL, '0.0.0.0', NULL, NULL, '/clickstream_example', 1, '2010-04-03 16:44:04', NULL)[0m
+  [4;35;1mStream Update (0.4ms)[0m   [0mUPDATE "cs_plugin_streams" SET "last_click" = '2010-04-03 16:44:04' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "cs_plugin_clicks" [0m
+  [4;36;1mStream Create (0.4ms)[0m   [0;1mINSERT INTO "cs_plugin_streams" ("session_id", "user_id", "last_click", "created_at") VALUES(NULL, NULL, NULL, '2010-04-03 16:50:43')[0m
+  [4;35;1mClick Create (0.4ms)[0m   [0mINSERT INTO "cs_plugin_clicks" ("path_info", "http_user_agent", "action", "http_referer", "remote_address", "controller", "params", "request_uri", "stream_id", "created_at", "request_path") VALUES('/', 'Rails Testing', NULL, NULL, '0.0.0.0', NULL, NULL, '/clickstream_example', 1, '2010-04-03 16:50:43', NULL)[0m
+  [4;36;1mStream Update (0.4ms)[0m   [0;1mUPDATE "cs_plugin_streams" SET "last_click" = '2010-04-03 16:50:43' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "cs_plugin_clicks" [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "cs_plugin_clicks" [0m
+  [4;36;1mStream Create (0.4ms)[0m   [0;1mINSERT INTO "cs_plugin_streams" ("session_id", "user_id", "last_click", "created_at") VALUES(NULL, NULL, NULL, '2010-04-03 17:15:15')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "cs_plugin_clicks" [0m
+  [4;36;1mStream Create (0.5ms)[0m   [0;1mINSERT INTO "cs_plugin_streams" ("session_id", "user_id", "last_click", "created_at") VALUES(NULL, NULL, NULL, '2010-04-03 17:16:07')[0m
+  [4;35;1mClick Create (0.5ms)[0m   [0mINSERT INTO "cs_plugin_clicks" ("path_info", "http_user_agent", "action", "http_referer", "remote_address", "controller", "params", "request_uri", "stream_id", "created_at", "request_path") VALUES('/', 'Rails Testing', 'index', NULL, '0.0.0.0', 'clickstream_example', NULL, '/clickstream_example', 1, '2010-04-03 17:16:07', NULL)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cs_plugin_clicks" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (17.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mDROP TABLE "cs_plugin_clicks"[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TABLE "cs_plugin_clicks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "action" varchar(255), "controller" varchar(255), "params" varchar(255), "created_at" datetime, "stream_id" integer, "path_info" varchar(255), "request_path" varchar(255), "request_uri" varchar(255), "http_user_agent" varchar(255), "http_referer" varchar(255), "remote_address" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mDROP TABLE "cs_plugin_streams"[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE "cs_plugin_streams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "user_id" integer, "created_at" datetime, "last_click" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "cs_plugin_clicks" [0m
+  [4;36;1mStream Create (0.5ms)[0m   [0;1mINSERT INTO "cs_plugin_streams" ("session_id", "user_id", "last_click", "created_at") VALUES(NULL, NULL, NULL, '2010-04-03 18:13:31')[0m
+  [4;35;1mClick Create (0.5ms)[0m   [0mINSERT INTO "cs_plugin_clicks" ("path_info", "http_user_agent", "action", "http_referer", "remote_address", "controller", "params", "request_uri", "stream_id", "created_at", "request_path") VALUES('/', 'Rails Testing', 'index', NULL, '0.0.0.0', 'clickstream_example', NULL, '/clickstream_example', 1, '2010-04-03 18:13:31', NULL)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cs_plugin_clicks" [0m
