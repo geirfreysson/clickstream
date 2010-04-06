@@ -26,7 +26,7 @@ class Stream < ActiveRecord::Base
     if self.clicks.size > 1
        self.clicks.last.created_at - self.clicks.first.created_at
     else
-      "0"
+      0
     end
   end
   
