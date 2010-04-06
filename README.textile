@@ -16,13 +16,13 @@ Install the plugin with
 <code>script/plugin install git://github.com/geirfreysson/clickstream.git</code>
 
 To create the tables used by Clickstream run the database migration task:
-bc. rake db:migrate:clickstream
+<code>rake db:migrate:clickstream</code>
 
 Next, include the module in the controller you want to monitor (or in the application controller to monitor all clicks) and add
 a before_filter.
 
-bc. include Clickstream
-before_filter :follow_clickstream
+<code>include Clickstream
+before_filter :follow_clickstream</code>
 
 Now all clicks are saved in the database and can be accessed and analyzed via the Stream objects.
 
@@ -30,4 +30,4 @@ Currently, we're only pulling up the most recent clickstreams and using that to 
 add more sophisticated queries once we have more data which will analyze common clickstream patterns etc. 
 
 
-Copyright (c) 2010 [name of plugin creator], released under the MIT license
+Copyright (c) 2010 Geir Freysson (http://www.geirfreysson.com), released under the MIT license
