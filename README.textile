@@ -21,8 +21,8 @@ To create the tables used by Clickstream run the database migration task:
 Next, include the module in the controller you want to monitor (or in the application controller to monitor all clicks) and add
 a before_filter.
 
-<code>include Clickstream
-before_filter :follow_clickstream</code>
+<code>include Clickstream</code>
+<code>before_filter :follow_clickstream</code>
 
 Now all clicks are saved in the database and can be accessed and analyzed via the Stream objects.
 
