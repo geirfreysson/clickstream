@@ -1,7 +1,7 @@
 class Stream < ActiveRecord::Base
   
   set_table_name :cs_plugin_streams
-  has_many :clicks
+  has_many :clicks, :dependent=>:destroy
   belongs_to :user
   
   # pass args such as 1.week.ago

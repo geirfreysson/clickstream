@@ -14,3 +14,22 @@ namespace :db do
     
   end
 end
+
+namespace :clicks do
+  desc "Remove clicks that don't belong to a clickstream that is associated with a user."
+  task :destroy_userless => :environment do
+    clickstreams = ClickStream.all
+    deleted = 0
+    saved = 0
+    for cs in clickstreams
+      if cs.user.nil?
+        cs.destroy
+        deleted = deleted + 1
+      else
+        saved = saved + 1
+      end
+    end
+    puts "Deleted " + deleted.to_s
+    puts "Kept " + saved.to_s
+  end
+end

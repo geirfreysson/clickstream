@@ -21,8 +21,11 @@ module Clickstream
     if logged_in? && cs.user_id.nil?
       cs.user_id = current_user.id
       cs.save
+      cs.add_click(params,request.env)
+    else
+      #uncomment this to store every single click, not only those of logged in users
+      #cs.add_click(params,request.env)
     end
-    cs.add_click(params,request.env)
   end
   
   def get_click_stream
